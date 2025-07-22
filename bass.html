@@ -4,23 +4,36 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-     <title>Scoreboard</title>
+    <title>Scoreboard</title>
   </head>
   <body>
     <div class="container">
       <div class="home">
-        <p>HOME</p>
+        <p class="title">HOME</p>
+        <div class="mark" id="markh"><label id="markhome">0</label></div>
+        <div class="guest-scoremarks">
+          <button onclick="plus1h()">+1</button>
+          <button onclick="plus2h()">+2</button>
+          <button onclick="plus3h()">+3</button>
+        </div>
+        <button class="new-gamebtn" id="new-gamebtn" onclick="newgamehome()">
+          New game
+        </button>
       </div>
 
       <div class="guest">
-        <p>GUEST</p>
-        <p>0</p>
+        <p class="title">GUEST</p>
+        <div class="mark" id="markg"><label id="markguest">0</label></div>
         <div class="guest-scoremarks">
-          <p>1</p>
-          <p>2</p>
-          <p>3</p>
+          <button onclick="plus1g()">+1</button>
+          <button onclick="plus2g()">+2</button>
+          <button onclick="plus3g()">+3</button>
         </div>
+        <button class="new-gamebtn" id="new-gamebtn" onclick="newgameguest()">
+          New game
+        </button>
       </div>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
